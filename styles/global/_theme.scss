@@ -1,0 +1,43 @@
+//! Colors
+
+// Primary
+
+$Blue-200: hsl(193, 38%, 86%);
+$Green-300: hsl(150, 100%, 66%);
+
+// Neutral
+
+$Blue-600: hsl(217, 19%, 38%);
+$Blue-900: hsl(217, 19%, 24%);
+$Blue-950: hsl(218, 23%, 16%);
+
+//! Typography
+
+$Manrope: 'Manrope', sans-serif;
+
+@mixin quote-id {
+  font-family: $Manrope;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: clamp(1rem, calc(0.955rem + 0.227vw), 1.125rem); /* min: 16px, max: 18px */
+}
+
+@mixin quote-text {
+  font-family: $Manrope;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.125rem;
+  font-size: clamp(1.25rem, calc(1.068rem + 0.909vw), 1.75rem); /* min: 20px, max: 28px */
+}
+
+//! CSS Variables
+
+:root {
+
+  --background-page-color: #{$Blue-950};
+  --background-card-color: #{$Blue-900};
+  --line-color: #{$Blue-600};
+  --quote-text-color: #{$Blue-200};
+  --quote-id-color: #{$Green-300};
+
+}

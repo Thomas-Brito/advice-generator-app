@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+}
+
+:root {
+  --background-page-color: hsl(218, 23%, 16%);
+  --background-card-color: hsl(217, 19%, 24%);
+  --line-color: hsl(217, 19%, 38%);
+  --quote-text-color: hsl(193, 38%, 86%);
+  --quote-id-color: hsl(150, 100%, 66%);
+}
+
+.page {
+  background-color: var(--background-page-color);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--background-card-color);
+  width: clamp(19.6875rem, 80%, 40rem);
+  padding: clamp(1rem, 15%, 1.5rem);
+  border-radius: 1rem;
+  gap: 0.5rem;
+}
+.card__advice-id {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: clamp(1rem, 0.955rem + 0.227vw, 1.125rem); /* min: 16px, max: 18px */
+  color: var(--quote-id-color);
+}
+.card__advice-text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.125rem;
+  font-size: clamp(1.25rem, 1.068rem + 0.909vw, 1.75rem); /* min: 20px, max: 28px */
+  color: var(--quote-text-color);
+  max-width: 27.5rem;
+  text-align: center;
+}
+.card-d-button {
+  background-color: var(--quote-id-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  position: relative;
+  inset-block-start: 3.5rem;
+}
+.card-d-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1rem var(--quote-id-color);
+}
+.card__division-icon {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */

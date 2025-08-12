@@ -1,0 +1,49 @@
+@use "../global/normalize";
+@use "../global/theme" as theme;
+@use "../global/templates/card" as card-template;
+
+.page {
+  background-color: var(--background-page-color);
+}
+
+.card {
+  @include card-template.card;
+  background-color: var(--background-card-color);
+  width: clamp(19.6875rem, 80%, 40rem); 
+  padding: clamp(1rem, 15%, 1.5rem);
+  border-radius: 1rem;
+  gap: 0.5rem;
+
+  &__advice-id {
+    @include theme.quote-id;
+    color: var(--quote-id-color);
+  }
+
+  &__advice-text {
+    @include theme.quote-text;
+    color: var(--quote-text-color);
+    max-width: 27.5rem;
+    text-align: center;
+  }
+
+  &-d-button {
+    background-color: var(--quote-id-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: relative;
+    inset-block-start: 3.5rem;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 1rem var(--quote-id-color);
+    }
+  }
+
+  &__division-icon {
+    max-width: 100%;
+  }
+}
